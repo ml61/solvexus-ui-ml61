@@ -1,6 +1,6 @@
 {
   "name": "@ml61/solvexus-ui-ml61",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "library with reusable react components.",
   "author": "ml61-solvexus",
   "license": "MIT",
@@ -12,8 +12,10 @@
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.4",
     "@types/react": "^18.0.15",
+    "bootstrap": "4.6.0",
     "postcss": "^8.4.14",
     "react": "^16.13.1",
+    "reactstrap": "8.9.0",
     "rollup": "^2.77.2",
     "rollup-plugin-dts": "^4.2.2",
     "rollup-plugin-postcss": "^4.0.2",
@@ -32,9 +34,5 @@
   "types": "dist/index.d.ts",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/ml61"
-  },
-  "dependencies": {
-    "bootstrap": "4.6.0",
-    "reactstrap": "8.9.0"
   }
 }

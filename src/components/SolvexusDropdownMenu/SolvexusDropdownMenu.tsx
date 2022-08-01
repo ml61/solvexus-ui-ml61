@@ -3,26 +3,20 @@ import React from "react";
 import { DropdownMenu } from "reactstrap";
 import { DropdownMenuProps } from "reactstrap/lib";
 
-const SolvexusDropdownMenu = (props: DropdownMenuProps) => {
+type SolvexusDropdownMenuProps = DropdownMenuProps & {
+  isOpen: boolean;
+  maxHeight?: number;
+};
+
+const SolvexusDropdownMenu = (props: SolvexusDropdownMenuProps) => {
+  const { isOpen, maxHeight = 300 } = props;
   return (
     <DropdownMenu
       {...props}
-      modifiers={{
-        setMaxHeight: {
-          enabled: true,
-          order: 890,
-          fn: (data) => {
-            return {
-              ...data,
-              styles: {
-                ...data.styles,
-                overflow: "overlay",
-                maxHeight: 300,
-              },
-            };
-          },
-        },
-      }}
+      className={`${props.className ? props.className : ""} ${
+        isOpen ? "show" : ""
+      }`}
+      style={{ maxHeight: `${maxHeight}px`, overflow: "overlay" }}
     >
       {props.children}
     </DropdownMenu>
