@@ -3,7 +3,7 @@ import React from "react";
 import { DropdownMenu } from "reactstrap";
 import { DropdownMenuProps } from "reactstrap/lib";
 
-export const BcDropdownMenu = (props: DropdownMenuProps) => {
+const SolvexusDropdownMenu = (props: DropdownMenuProps) => {
   return (
     <DropdownMenu
       {...props}
@@ -28,3 +28,4 @@ export const BcDropdownMenu = (props: DropdownMenuProps) => {
     </DropdownMenu>
   );
 };
+export default SolvexusDropdownMenu;
